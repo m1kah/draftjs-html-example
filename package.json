@@ -1,0 +1,49 @@
+{
+  "name": "draftjs-html-example",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "watch": "node_modules/.bin/webpack-dev-server --env.mode development",
+    "build": "node_modules/.bin/webpack --env.mode production",
+    "test": "node_modules/.bin/jest",
+    "test-watch": "node_modules/.bin/jest --watch"
+  },
+  "dependencies": {
+    "draft-js": "^0.11.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@testing-library/jest-dom": "^5.7.0",
+    "@testing-library/react": "^10.0.4",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.0.1",
+    "jest-cli": "^26.0.1",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
+    "prettier": "2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "jest": {
+    "roots": [
+      "src/js/**/*.{js}"
+    ],
+    "testMatch": [
+      "<rootDir>/src/jest/**/*.test.js"
+    ],
+    "testEnvironment": "test-environment-jsdom-fourteen",
+    "transform": {
+      "\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ]
+  }
+}
