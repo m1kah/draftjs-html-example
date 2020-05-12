@@ -1,6 +1,7 @@
 import React from "react";
 import style from "styled-components";
 import { Editor, EditorState, RichUtils } from "draft-js";
+import { evalHtml } from "./HtmlEvaluator";
 
 const Button = style.button`
   padding: 5px;
@@ -33,6 +34,15 @@ const EditorContainer = style.div`
 `;
 
 const Component = style.div`
+`;
+
+const Output = style.pre`
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-top: 1px dashed #ddd;
+  padding: 20px 0;
+  font-family: monospace;
 `;
 
 class StyleButton extends React.Component {
@@ -158,6 +168,7 @@ export default class HtmlEditor extends React.Component {
             handleKeyCommand={(command) => this.handleKeyCommand(command)}
           />
         </EditorContainer>
+        <Output>{evalHtml(this.state.editorState)}</Output>
       </Component>
     );
   }
