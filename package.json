@@ -33,12 +33,12 @@
   },
   "jest": {
     "roots": [
-      "src/js/**/*.{js}"
+      "src/"
     ],
     "testMatch": [
       "<rootDir>/src/jest/**/*.test.js"
     ],
-    "testEnvironment": "test-environment-jsdom-fourteen",
+    "testEnvironment": "jest-environment-jsdom-fourteen",
     "transform": {
       "\\.js$": "<rootDir>/node_modules/babel-jest"
     },
