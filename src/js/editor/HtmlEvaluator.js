@@ -41,8 +41,8 @@ function startOrAppend(text, tag, env) {
 
 const STYLE_MAP = {
   BOLD: "b",
-  ITALIC: "em",
-  UNDERLINE: "ins",
+  ITALIC: "i",
+  UNDERLINE: "u",
 };
 
 function evalText(contentBlock) {
